@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: rock-iit-neet
+  devtools:
+    restart:
+      enabled: false
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+  jackson:
+    serialization:
+      WRITE_DURATIONS_AS_TIMESTAMPS: false
+    default-property-inclusion: non_null
+
+server:
+  port: 9090
+  error:
+    include-message: always
+    include-binding-errors: always
+
+logging:
+  level:
+    com.rock.iit.neet: DEBUG
+    org.springframework.web: INFO

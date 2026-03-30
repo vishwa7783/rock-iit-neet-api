@@ -1,0 +1,114 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.rock.iit.neet.api:backend >--------------------
+[INFO] Building ROCK IIT NEET API 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.4:run (default-cli) > test-compile @ backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ backend ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ backend ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ backend ---
+[INFO] skip non existing resourceDirectory /Users/vishwjeetkumar/Desktop/Rock/rock-iit-neet-api/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ backend ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.4:run (default-cli) < test-compile @ backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.4:run (default-cli) @ backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-03-26T18:45:17.314+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] com.rock.iit.neet.BackendApplication          : Starting BackendApplication using Java 17.0.12 with PID 87342 (/Users/vishwjeetkumar/Desktop/Rock/rock-iit-neet-api/target/classes started by vishwjeetkumar in /Users/vishwjeetkumar/Desktop/Rock/rock-iit-neet-api)
+2026-03-26T18:45:17.315+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] com.rock.iit.neet.BackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-03-26T18:45:17.334+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-26T18:45:17.334+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-26T18:45:17.714+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-26T18:45:17.756+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 6 JPA repository interfaces.
+2026-03-26T18:45:18.074+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-26T18:45:18.080+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-26T18:45:18.080+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-26T18:45:18.101+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-26T18:45:18.102+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 766 ms
+2026-03-26T18:45:18.188+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-26T18:45:18.223+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-26T18:45:18.239+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-26T18:45:18.351+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-26T18:45:18.365+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-26T18:45:18.496+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e968a4e
+2026-03-26T18:45:18.497+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-26T18:45:18.518+05:30  WARN 87342 --- [rock-iit-neet-api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-26T18:45:19.018+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-26T18:45:19.130+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26T18:45:19.473+05:30  WARN 87342 --- [rock-iit-neet-api] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'routerFunctionMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.function.support.RouterFunctionMapping]: Factory method 'routerFunctionMapping' threw exception with message: Error creating bean with name 'messageConverters' defined in class path resource [org/springframework/boot/autoconfigure/http/HttpMessageConvertersAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.autoconfigure.http.HttpMessageConverters]: Factory method 'messageConverters' threw exception with message: Error creating bean with name 'mappingJackson2HttpMessageConverter' defined in class path resource [org/springframework/boot/autoconfigure/http/JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration.class]: Unsatisfied dependency expressed through method 'mappingJackson2HttpMessageConverter' parameter 0: Error creating bean with name 'jacksonObjectMapper' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperConfiguration.class]: Unsatisfied dependency expressed through method 'jacksonObjectMapper' parameter 0: Error creating bean with name 'jacksonObjectMapperBuilder' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration.class]: Unsatisfied dependency expressed through method 'jacksonObjectMapperBuilder' parameter 1: Error creating bean with name 'standardJacksonObjectMapperBuilderCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/jackson/JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration.class]: Unsatisfied dependency expressed through method 'standardJacksonObjectMapperBuilderCustomizer' parameter 0: Error creating bean with name 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties': Could not bind properties to 'JacksonProperties' : prefix=spring.jackson, ignoreInvalidFields=false, ignoreUnknownFields=true
+2026-03-26T18:45:19.474+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26T18:45:19.476+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-26T18:45:19.477+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-26T18:45:19.479+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-26T18:45:19.485+05:30  INFO 87342 --- [rock-iit-neet-api] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-26T18:45:19.495+05:30 ERROR 87342 --- [rock-iit-neet-api] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jackson.serialization' to java.util.Map<com.fasterxml.jackson.databind.SerializationFeature, java.lang.Boolean>:
+
+    Reason: failed to convert java.lang.String to com.fasterxml.jackson.databind.SerializationFeature (caused by java.lang.IllegalArgumentException: No enum constant com.fasterxml.jackson.databind.SerializationFeature.write-durations-as-iso8601)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    CLOSE_CLOSEABLE
+    EAGER_SERIALIZER_FETCH
+    FAIL_ON_EMPTY_BEANS
+    FAIL_ON_SELF_REFERENCES
+    FAIL_ON_UNWRAPPED_TYPE_IDENTIFIERS
+    FLUSH_AFTER_WRITE_VALUE
+    INDENT_OUTPUT
+    ORDER_MAP_ENTRIES_BY_KEYS
+    USE_EQUALITY_FOR_OBJECT_ID
+    WRAP_EXCEPTIONS
+    WRAP_ROOT_VALUE
+    WRITE_BIGDECIMAL_AS_PLAIN
+    WRITE_CHAR_ARRAYS_AS_JSON_ARRAYS
+    WRITE_DATES_AS_TIMESTAMPS
+    WRITE_DATES_WITH_CONTEXT_TIME_ZONE
+    WRITE_DATES_WITH_ZONE_ID
+    WRITE_DATE_KEYS_AS_TIMESTAMPS
+    WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS
+    WRITE_DURATIONS_AS_TIMESTAMPS
+    WRITE_EMPTY_JSON_ARRAYS
+    WRITE_ENUMS_USING_INDEX
+    WRITE_ENUMS_USING_TO_STRING
+    WRITE_ENUM_KEYS_USING_INDEX
+    WRITE_NULL_MAP_VALUES
+    WRITE_SELF_REFERENCES_AS_NULL
+    WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.246 s
+[INFO] Finished at: 2026-03-26T18:45:19+05:30
+[INFO] ------------------------------------------------------------------------
