@@ -25,4 +25,5 @@ public class EnquiryResponseDTO {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private String status;
+    private String reason;
 }
