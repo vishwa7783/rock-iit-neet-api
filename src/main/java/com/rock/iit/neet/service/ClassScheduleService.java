@@ -36,16 +36,6 @@ public class ClassScheduleService {
                 .collect(Collectors.toList());
     }
 
-    public List<ClassScheduleResponseDTO> getSchedulesByBatch(String batch) {
-        return classScheduleRepository.findByBatch(batch).stream()
-                .map(schedule -> {
-                    ClassScheduleResponseDTO dto = classScheduleMapper.toResponseDTO(schedule);
-                    teacherRepository.findById(schedule.getTeacherId())
-                            .ifPresent(teacher -> dto.setTeacherName(teacher.getName()));
-                    return dto;
-                })
-                .collect(Collectors.toList());
-    }
 
     public List<ClassScheduleResponseDTO> getSchedulesByTeacher(UUID teacherId) {
         return classScheduleRepository.findByTeacherId(teacherId).stream()

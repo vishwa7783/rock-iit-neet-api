@@ -9,7 +9,6 @@ import java.util.UUID;
 
 @Repository
 public interface ClassScheduleRepository extends JpaRepository<ClassSchedule, Long> {
-    List<ClassSchedule> findByBatch(String batch);
 
     List<ClassSchedule> findByTeacherId(UUID teacherId);
 }

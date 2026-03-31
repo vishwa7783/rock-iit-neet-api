@@ -38,6 +38,5 @@ public class Enquiry extends BaseEntity {
 
     private String parentName;
     private String parentNumber;
-
-
+    private String status;
 }

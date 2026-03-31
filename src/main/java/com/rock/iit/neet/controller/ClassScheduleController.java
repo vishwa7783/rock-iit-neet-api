@@ -25,11 +25,11 @@ public class ClassScheduleController {
         return ResponseEntity.ok(ApiResponse.success(schedules, "Schedules retrieved successfully"));
     }
 
-    @GetMapping("/batch/{batch}")
-    public ResponseEntity<ApiResponse<List<ClassScheduleResponseDTO>>> getSchedulesByBatch(@PathVariable String batch) {
-        List<ClassScheduleResponseDTO> schedules = classScheduleService.getSchedulesByBatch(batch);
-        return ResponseEntity.ok(ApiResponse.success(schedules, "Batch schedules retrieved successfully"));
-    }
+//    @GetMapping("/batch/{batch}")
+//    public ResponseEntity<ApiResponse<List<ClassScheduleResponseDTO>>> getSchedulesByBatch(@PathVariable String batch) {
+//        List<ClassScheduleResponseDTO> schedules = classScheduleService.getSchedulesByBatch(batch);
+//        return ResponseEntity.ok(ApiResponse.success(schedules, "Batch schedules retrieved successfully"));
+//    }
 
     @GetMapping("/teacher/{teacherId}")
     public ResponseEntity<ApiResponse<List<ClassScheduleResponseDTO>>> getSchedulesByTeacher(
