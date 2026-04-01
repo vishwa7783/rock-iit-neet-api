@@ -32,4 +32,8 @@ public class StudentRequestDTO {
     @Min(0)
     @Max(100)
     private Double attendancePercentage;
+
+    private String parentName;
+
+    private String parentPhoneNumber;
 }

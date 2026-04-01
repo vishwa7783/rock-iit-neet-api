@@ -22,7 +22,7 @@ public class StudentController {
 
     @GetMapping
     public ResponseEntity<ApiResponse<List<StudentResponseDTO>>> getAllStudents() {
-        List<StudentResponseDTO> students = studentService.getAllStudents();
+        List<StudentResponseDTO> students = studentService.getAllStudentsJdbc();
         return ResponseEntity.ok(ApiResponse.success(students, "Students retrieved successfully"));
     }
 

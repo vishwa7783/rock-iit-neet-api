@@ -34,4 +34,10 @@ public class Student extends BaseEntity {
 
     @Column(name = "attendance_percentage")
     private Double attendancePercentage;
+
+    @Column(name = "parent_name")
+    private String parentName;
+
+    @Column(name = "parent_phone_number")
+    private String parentPhoneNumber;
 }

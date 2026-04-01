@@ -8,6 +8,7 @@ import com.rock.iit.neet.mapper.StudentMapper;
 import com.rock.iit.neet.repository.CourseRepository;
 import com.rock.iit.neet.repository.StudentRepository;
 import com.rock.iit.neet.repository.TeacherRepository;
+import com.rock.iit.neet.repository.jdbc.StudentJdbcRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,11 +26,16 @@ public class StudentService {
     private final TeacherRepository teacherRepository;
     private final CourseRepository courseRepository;
     private final StudentMapper studentMapper;
+    private final StudentJdbcRepository studentJdbcRepository;
 
     public List<StudentResponseDTO> getAllStudents() {
         return studentRepository.findAll().stream()
                 .map(studentMapper::toResponseDTO)
                 .collect(Collectors.toList());
+    }
+
+    public List<StudentResponseDTO> getAllStudentsJdbc() {
+        return studentJdbcRepository.getStudentCourseBatchDetails();
     }
 
     public StudentResponseDTO getStudentById(UUID id) {
