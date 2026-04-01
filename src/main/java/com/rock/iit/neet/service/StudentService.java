@@ -63,10 +63,10 @@ public class StudentService {
 
     @Transactional
     public void deleteStudent(UUID id) {
-        if (!studentRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Student not found with ID: " + id);
-        }
-        studentRepository.deleteById(id);
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Student not found with ID: " + id));
+        student.setStatus("archived");
+        studentRepository.save(student);
     }
 
     public Map<String, Object> getAdminStats() {
@@ -78,7 +78,6 @@ public class StudentService {
                 "totalStudents", totalStudents,
                 "totalTeachers", totalTeachers,
                 "activeCourses", activeCourses,
-                "revenue", "12.5L"
-        );
+                "revenue", "12.5L");
     }
 }

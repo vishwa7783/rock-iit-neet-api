@@ -1,6 +1,5 @@
 package com.rock.iit.neet.entity.dao;
 
-import com.rock.iit.neet.entity.enums.PaymentStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,9 +28,7 @@ public class Payment extends BaseEntity {
     @Column(name = "payment_date")
     private LocalDateTime paymentDate;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private PaymentStatus status;
+    private String status;
 
     @Column
     private String method;

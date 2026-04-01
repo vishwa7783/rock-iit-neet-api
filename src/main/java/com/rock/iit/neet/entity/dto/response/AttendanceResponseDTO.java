@@ -20,7 +20,7 @@ public class AttendanceResponseDTO {
     private String studentName;
     private Long classScheduleId;
     private String subject;
-    private AttendanceStatus status;
+    private AttendanceStatus attendanceStatus;
     private LocalDate date;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

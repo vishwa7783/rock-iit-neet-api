@@ -52,9 +52,9 @@ public class CourseService {
 
     @Transactional
     public void deleteCourse(Long id) {
-        if (!courseRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Course not found with ID: " + id);
-        }
-        courseRepository.deleteById(id);
+        Course course = courseRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Course not found with ID: " + id));
+        course.setStatus("archived");
+        courseRepository.save(course);
     }
 }

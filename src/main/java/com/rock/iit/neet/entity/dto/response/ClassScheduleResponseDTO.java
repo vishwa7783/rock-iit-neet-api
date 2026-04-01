@@ -24,6 +24,7 @@ public class ClassScheduleResponseDTO {
     private String teacherName;
     private Long batchId;
     private String room;
+    private String recordStatus;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

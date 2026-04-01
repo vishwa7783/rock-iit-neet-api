@@ -58,9 +58,9 @@ public class TeacherService {
 
     @Transactional
     public void deleteTeacher(UUID id) {
-        if (!teacherRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Teacher not found with ID: " + id);
-        }
-        teacherRepository.deleteById(id);
+        Teacher teacher = teacherRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Teacher not found with ID: " + id));
+        teacher.setStatus("archived");
+        teacherRepository.save(teacher);
     }
 }

@@ -2,6 +2,7 @@ package com.rock.iit.neet.entity.dao;
 
 import com.rock.iit.neet.entity.enums.AttendanceStatus;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import java.time.LocalDate;
 
@@ -24,9 +25,13 @@ public class Attendance extends BaseEntity {
     @Column(name = "class_schedule_id", nullable = false)
     private Long classScheduleId;
 
+    @Column(name = "subject")
+    private String subject;
+
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private AttendanceStatus status;
+    @Column(name = "attendance_status", nullable = false)
+    @NotNull(message = "Status is required")
+    private AttendanceStatus attendanceStatus;
 
     @Column(nullable = false)
     private LocalDate date;

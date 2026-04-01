@@ -2,6 +2,8 @@ package com.rock.iit.neet.entity.dao;
 
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -25,4 +27,7 @@ public class Teacher extends BaseEntity {
 
     @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(name = "subjects", columnDefinition = "text[]")
+    private String[] subjects;
 }

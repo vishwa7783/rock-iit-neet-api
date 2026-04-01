@@ -16,6 +16,7 @@ public class CourseResponseDTO {
     private String subtitle;
     private String description;
     private String targetClasses;
+    private String recordStatus;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

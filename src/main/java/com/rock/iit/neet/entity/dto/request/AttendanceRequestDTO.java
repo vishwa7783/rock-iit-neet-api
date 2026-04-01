@@ -22,9 +22,6 @@ public class AttendanceRequestDTO {
     @NotNull(message = "Class schedule ID is required")
     private Long classScheduleId;
 
-    @NotNull(message = "Status is required")
-    private AttendanceStatus status;
-
     @NotNull(message = "Date is required")
     private LocalDate date;
 }

@@ -24,4 +24,6 @@ public class TeacherRequestDTO {
     @NotBlank(message = "Email is required")
     @Email(message = "Invalid email format")
     private String email;
+
+    private String[] subjects;
 }

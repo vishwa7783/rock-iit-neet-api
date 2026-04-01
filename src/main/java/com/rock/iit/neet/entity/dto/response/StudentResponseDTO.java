@@ -1,8 +1,5 @@
 package com.rock.iit.neet.entity.dto.response;
 
-import com.rock.iit.neet.entity.dao.BaseEntity;
-import com.rock.iit.neet.entity.dao.Batch;
-import com.rock.iit.neet.entity.dao.Course;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,6 +22,7 @@ public class StudentResponseDTO {
     private CourseResponseDTO course;
     private BatchResponseDTO batch;
     private Double attendancePercentage;
+    private String recordStatus;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
