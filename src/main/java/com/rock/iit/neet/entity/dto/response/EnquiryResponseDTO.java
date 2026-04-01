@@ -21,7 +21,7 @@ public class EnquiryResponseDTO {
     private String schoolName;
     private String grade;
     private String parentName;
-    private String parentNumber;
+    private String parentPhoneNumber;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private String status;

@@ -26,5 +26,5 @@ public class EnquiryRequestDTO {
     private String schoolName;
     private String grade;
     private String parentName;
-    private String parentNumber;
+    private String parentPhoneNumber;
 }

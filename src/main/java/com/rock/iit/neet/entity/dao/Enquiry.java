@@ -37,7 +37,7 @@ public class Enquiry extends BaseEntity {
     private String grade;
 
     private String parentName;
-    private String parentNumber;
+    private String parentPhoneNumber;
     private String status;
     private String reason;
 }
