@@ -22,32 +22,32 @@ public class TeacherController {
     @GetMapping
     public ResponseEntity<ApiResponse<List<TeacherResponseDTO>>> getAllTeachers() {
         List<TeacherResponseDTO> teachers = teacherService.getAllTeachers();
-        return ResponseEntity.ok(ApiResponse.success(teachers, "Teachers retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(teachers));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<TeacherResponseDTO>> getTeacherById(@PathVariable UUID id) {
         TeacherResponseDTO teacher = teacherService.getTeacherById(id);
-        return ResponseEntity.ok(ApiResponse.success(teacher, "Teacher retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(teacher));
     }
 
     @PostMapping
     public ResponseEntity<ApiResponse<TeacherResponseDTO>> createTeacher(
             @Valid @RequestBody TeacherRequestDTO requestDTO) {
         TeacherResponseDTO teacher = teacherService.createTeacher(requestDTO);
-        return ResponseEntity.status(201).body(ApiResponse.success(teacher, "Teacher created successfully"));
+        return ResponseEntity.status(201).body(ApiResponse.success(teacher));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponse<TeacherResponseDTO>> updateTeacher(@PathVariable UUID id,
             @Valid @RequestBody TeacherRequestDTO requestDTO) {
         TeacherResponseDTO teacher = teacherService.updateTeacher(id, requestDTO);
-        return ResponseEntity.ok(ApiResponse.success(teacher, "Teacher updated successfully"));
+        return ResponseEntity.ok(ApiResponse.success(teacher));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteTeacher(@PathVariable UUID id) {
         teacherService.deleteTeacher(id);
-        return ResponseEntity.ok(ApiResponse.success("Teacher deleted successfully"));
+        return ResponseEntity.ok(ApiResponse.success());
     }
 }

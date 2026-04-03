@@ -22,13 +22,13 @@ public class TestScoreController {
     @GetMapping("/student/{studentId}")
     public ResponseEntity<ApiResponse<List<TestScoreResponseDTO>>> getScoresByStudent(@PathVariable UUID studentId) {
         List<TestScoreResponseDTO> scores = testScoreService.getScoresByStudent(studentId);
-        return ResponseEntity.ok(ApiResponse.success(scores, "Student scores retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(scores));
     }
 
     @PostMapping
     public ResponseEntity<ApiResponse<TestScoreResponseDTO>> createScore(
             @Valid @RequestBody TestScoreRequestDTO requestDTO) {
         TestScoreResponseDTO score = testScoreService.createScore(requestDTO);
-        return ResponseEntity.status(201).body(ApiResponse.success(score, "Test score recorded successfully"));
+        return ResponseEntity.status(201).body(ApiResponse.success(score));
     }
 }

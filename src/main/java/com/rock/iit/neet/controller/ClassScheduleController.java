@@ -22,45 +22,39 @@ public class ClassScheduleController {
     @GetMapping
     public ResponseEntity<ApiResponse<List<ClassScheduleResponseDTO>>> getAllSchedules() {
         List<ClassScheduleResponseDTO> schedules = classScheduleService.getAllSchedules();
-        return ResponseEntity.ok(ApiResponse.success(schedules, "Schedules retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(schedules));
     }
-
-//    @GetMapping("/batch/{batch}")
-//    public ResponseEntity<ApiResponse<List<ClassScheduleResponseDTO>>> getSchedulesByBatch(@PathVariable String batch) {
-//        List<ClassScheduleResponseDTO> schedules = classScheduleService.getSchedulesByBatch(batch);
-//        return ResponseEntity.ok(ApiResponse.success(schedules, "Batch schedules retrieved successfully"));
-//    }
 
     @GetMapping("/teacher/{teacherId}")
     public ResponseEntity<ApiResponse<List<ClassScheduleResponseDTO>>> getSchedulesByTeacher(
             @PathVariable UUID teacherId) {
         List<ClassScheduleResponseDTO> schedules = classScheduleService.getSchedulesByTeacher(teacherId);
-        return ResponseEntity.ok(ApiResponse.success(schedules, "Teacher schedules retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(schedules));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<ClassScheduleResponseDTO>> getScheduleById(@PathVariable Long id) {
         ClassScheduleResponseDTO schedule = classScheduleService.getScheduleById(id);
-        return ResponseEntity.ok(ApiResponse.success(schedule, "Schedule retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(schedule));
     }
 
     @PostMapping
     public ResponseEntity<ApiResponse<ClassScheduleResponseDTO>> createSchedule(
             @Valid @RequestBody ClassScheduleRequestDTO requestDTO) {
         ClassScheduleResponseDTO schedule = classScheduleService.createSchedule(requestDTO);
-        return ResponseEntity.status(201).body(ApiResponse.success(schedule, "Schedule created successfully"));
+        return ResponseEntity.status(201).body(ApiResponse.success(schedule));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponse<ClassScheduleResponseDTO>> updateSchedule(@PathVariable Long id,
             @Valid @RequestBody ClassScheduleRequestDTO requestDTO) {
         ClassScheduleResponseDTO schedule = classScheduleService.updateSchedule(id, requestDTO);
-        return ResponseEntity.ok(ApiResponse.success(schedule, "Schedule updated successfully"));
+        return ResponseEntity.ok(ApiResponse.success(schedule));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteSchedule(@PathVariable Long id) {
         classScheduleService.deleteSchedule(id);
-        return ResponseEntity.ok(ApiResponse.success("Schedule deleted successfully"));
+        return ResponseEntity.ok(ApiResponse.success());
     }
 }

@@ -1,10 +1,13 @@
 package com.rock.iit.neet.exception;
 
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.UNAUTHORIZED)
+@Getter
 public class UnauthorizedException extends RuntimeException {
+
+    private final HttpStatus status = HttpStatus.UNAUTHORIZED;
+
     public UnauthorizedException(String message) {
         super(message);
     }

@@ -1,38 +1,31 @@
 package com.rock.iit.neet.entity.dto.response;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
-@Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResponse<T> {
-    private boolean success;
-    private String message;
+
     private T data;
 
-    public static <T> ApiResponse<T> success(T data, String message) {
+    private ErrorResponseDTO error;
+
+    public static <T> ApiResponse<T> success(T data) {
         return ApiResponse.<T>builder()
-                .success(true)
-                .message(message)
                 .data(data)
                 .build();
     }
 
-    public static ApiResponse<Void> success(String message) {
-        return ApiResponse.<Void>builder()
-                .success(true)
-                .message(message)
-                .build();
+    public static ApiResponse<Void> success() {
+        return ApiResponse.<Void>builder().build();
     }
 
-    public static ApiResponse<Void> error(String message) {
+    public static ApiResponse<Void> error(int code, String message) {
         return ApiResponse.<Void>builder()
-                .success(false)
-                .message(message)
+                .error(new ErrorResponseDTO(code, message))
                 .build();
     }
 }

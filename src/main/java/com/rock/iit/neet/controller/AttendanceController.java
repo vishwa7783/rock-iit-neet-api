@@ -23,19 +23,19 @@ public class AttendanceController {
     public ResponseEntity<ApiResponse<List<AttendanceResponseDTO>>> getAttendanceByStudent(
             @PathVariable UUID studentId) {
         List<AttendanceResponseDTO> attendance = attendanceService.getAttendanceByStudent(studentId);
-        return ResponseEntity.ok(ApiResponse.success(attendance, "Student attendance retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(attendance));
     }
 
     @GetMapping("/class/{classId}")
     public ResponseEntity<ApiResponse<List<AttendanceResponseDTO>>> getAttendanceByClass(@PathVariable Long classId) {
         List<AttendanceResponseDTO> attendance = attendanceService.getAttendanceByClass(classId);
-        return ResponseEntity.ok(ApiResponse.success(attendance, "Class attendance retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(attendance));
     }
 
     @PostMapping
     public ResponseEntity<ApiResponse<AttendanceResponseDTO>> markAttendance(
             @Valid @RequestBody AttendanceRequestDTO requestDTO) {
         AttendanceResponseDTO attendance = attendanceService.markAttendance(requestDTO);
-        return ResponseEntity.status(201).body(ApiResponse.success(attendance, "Attendance marked successfully"));
+        return ResponseEntity.status(201).body(ApiResponse.success(attendance));
     }
 }

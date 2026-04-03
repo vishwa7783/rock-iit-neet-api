@@ -21,32 +21,32 @@ public class CourseController {
     @GetMapping
     public ResponseEntity<ApiResponse<List<CourseResponseDTO>>> getAllCourses() {
         List<CourseResponseDTO> courses = courseService.getAllCourses();
-        return ResponseEntity.ok(ApiResponse.success(courses, "Courses retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(courses));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<CourseResponseDTO>> getCourseById(@PathVariable Long id) {
         CourseResponseDTO course = courseService.getCourseById(id);
-        return ResponseEntity.ok(ApiResponse.success(course, "Course retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(course));
     }
 
     @PostMapping
     public ResponseEntity<ApiResponse<CourseResponseDTO>> createCourse(
             @Valid @RequestBody CourseRequestDTO requestDTO) {
         CourseResponseDTO course = courseService.createCourse(requestDTO);
-        return ResponseEntity.status(201).body(ApiResponse.success(course, "Course created successfully"));
+        return ResponseEntity.status(201).body(ApiResponse.success(course));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponse<CourseResponseDTO>> updateCourse(@PathVariable Long id,
             @Valid @RequestBody CourseRequestDTO requestDTO) {
         CourseResponseDTO course = courseService.updateCourse(id, requestDTO);
-        return ResponseEntity.ok(ApiResponse.success(course, "Course updated successfully"));
+        return ResponseEntity.ok(ApiResponse.success(course));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteCourse(@PathVariable Long id) {
         courseService.deleteCourse(id);
-        return ResponseEntity.ok(ApiResponse.success("Course deleted successfully"));
+        return ResponseEntity.ok(ApiResponse.success());
     }
 }

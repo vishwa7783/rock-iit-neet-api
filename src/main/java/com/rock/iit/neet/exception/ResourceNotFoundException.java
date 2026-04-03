@@ -1,10 +1,13 @@
 package com.rock.iit.neet.exception;
 
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.NOT_FOUND)
+@Getter
 public class ResourceNotFoundException extends RuntimeException {
+
+    private final HttpStatus status = HttpStatus.NOT_FOUND;
+
     public ResourceNotFoundException(String message) {
         super(message);
     }

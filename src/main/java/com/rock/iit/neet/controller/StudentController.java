@@ -23,38 +23,38 @@ public class StudentController {
     @GetMapping
     public ResponseEntity<ApiResponse<List<StudentResponseDTO>>> getAllStudents() {
         List<StudentResponseDTO> students = studentService.getAllStudentsJdbc();
-        return ResponseEntity.ok(ApiResponse.success(students, "Students retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(students));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<StudentResponseDTO>> getStudentById(@PathVariable UUID id) {
         StudentResponseDTO student = studentService.getStudentById(id);
-        return ResponseEntity.ok(ApiResponse.success(student, "Student retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(student));
     }
 
     @PostMapping
     public ResponseEntity<ApiResponse<StudentResponseDTO>> createStudent(
             @Valid @RequestBody StudentRequestDTO requestDTO) {
         StudentResponseDTO student = studentService.createStudent(requestDTO);
-        return ResponseEntity.status(201).body(ApiResponse.success(student, "Student created successfully"));
+        return ResponseEntity.status(201).body(ApiResponse.success(student));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponse<StudentResponseDTO>> updateStudent(@PathVariable UUID id,
             @Valid @RequestBody StudentRequestDTO requestDTO) {
         StudentResponseDTO student = studentService.updateStudent(id, requestDTO);
-        return ResponseEntity.ok(ApiResponse.success(student, "Student updated successfully"));
+        return ResponseEntity.ok(ApiResponse.success(student));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteStudent(@PathVariable UUID id) {
         studentService.deleteStudent(id);
-        return ResponseEntity.ok(ApiResponse.success("Student deleted successfully"));
+        return ResponseEntity.ok(ApiResponse.success());
     }
 
     @GetMapping("/admin/stats")
     public ResponseEntity<ApiResponse<Map<String, Object>>> getAdminStats() {
         Map<String, Object> stats = studentService.getAdminStats();
-        return ResponseEntity.ok(ApiResponse.success(stats, "Admin statistics retrieved successfully"));
+        return ResponseEntity.ok(ApiResponse.success(stats));
     }
 }
